@@ -1,0 +1,11 @@
+export type Role = 'manager' | 'boy' | 'customer';
+export type Area = { id:string; name:string; city:string; boys:number; customers:number };
+export type Agent = { id:string; name:string; phone:string; areaId:string; active:boolean };
+export type Customer = { id:string; name:string; phone:string; email?:string; address?:string; areaId:string; agentIds:string[]; outstanding:number; dueAmount:number; frequency:'Weekly'|'Monthly'; status:'Active'|'Overdue'|'Closed' };
+export type Loan = { id:string; customerId:string; principal:number; interestRate:number; totalPayable:number; outstanding:number; frequency:'Weekly'|'Monthly'; startDate:string; status:'Active'|'Closed' };
+export type ProofKind = 'Customer confirmation photo'|'UPI screenshot'|'Bank transaction proof';
+export type Collection = { id:string; customerId:string; agentId:string; areaId:string; amount:number; principal:number; interest:number; date:string; time:string; method:'Cash'|'UPI'|'Bank'; type:'Loan'|'Chit'; login:string; frequency:'Weekly'|'Monthly'; status:'Confirmed'|'Rejected'; proofUri?:string|null; proofKind?:ProofKind; referenceNo?:string; collectorConfirmedAt?:string; managerVerified?:boolean };
+export type Expense = { id:string; areaId:string; agentId:string; type:'Food'|'Petrol'|'Travel'|'Other'; amount:number; date:string; note:string };
+export type Chit = { id:string; name:string; frequency:'Weekly'|'Monthly'; members:number; installment:number; collected:number; pending:number; status:'Running'|'Completed' };
+export type Branding = { companyName:string; logoUri:string|null };
+export type Leave = { id:string; agentId:string; fromDate:string; toDate:string; reason:string; status:'Pending'|'Approved'|'Rejected'; createdBy:string; createdAt?:string };

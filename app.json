@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Financial App Demo",
+    "slug": "financial-app-demo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.financialappdemo"
+    },
+    "android": {
+      "package": "com.example.financialappdemo"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow the manager to select a company logo.",
+          "cameraPermission": "Allow the app to capture payment collection proof photos.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "30143c9e-2594-424b-ad6e-9dcd2a3abc38"
+      }
+    }
+  }
+}
